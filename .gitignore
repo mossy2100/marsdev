@@ -1,19 +1,70 @@
-*.log
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!wp-content/
+
+# Ignore the config file.
 wp-config.php
-wp-content/advanced-cache.php
-wp-content/backup-db/
-wp-content/backups/
-wp-content/blogs.dir/
-wp-content/cache/
-wp-content/upgrade/
-wp-content/uploads/
-wp-content/mu-plugins/
-wp-content/wp-cache-config.php
+
+# Ignore everything in the "wp-content" directory except certain directories.
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+
+# Ignore all files starting with '.'.
+.*
+
+# Track this file .gitignore (i.e. do NOT ignore it).
+!.gitignore
+
+# Track .editorconfig file (i.e. do NOT ignore it).
+!.editorconfig
+
+# Track readme.md in the root (i.e. do NOT ignore it).
+!readme.md
+
+# Ignore all files that start with '~'.
+~*
+
+# Ignore OS generated files.
+ehthumbs.db
+Thumbs.db
+
+# Ignore IDE/editor files.
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+
+# Ignore log files and databases.
+*.log
+*.sql
+*.sqlite
+
+# Ignore compiled files.
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Ignore packaged files.
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Ignore these plugins from the core.
 wp-content/plugins/hello.php
+wp-content/plugins/akismet/
 
-/.htaccess
-/license.txt
-/readme.html
-/sitemap.xml
-/sitemap.xml.gz
+# Ignore specific themes.
+wp-content/themes/twenty*/
 
+# Ignore node/grunt dependency directories.
+node_modules/
